@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    
+    tools {
+        git 'Default'  // or specify the Git tool you've configured
+    }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id-ec2') // DockerHub credentials stored in Jenkins
         DOCKER_IMAGE = 'thethymca/my-node-app'
