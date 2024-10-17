@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        git 'Default'  // or specify the Git tool you've configured
+        git 'git-tool'  // or specify the Git tool you've configured
     }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id-ec2') // DockerHub credentials stored in Jenkins
